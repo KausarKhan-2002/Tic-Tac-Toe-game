@@ -14,8 +14,6 @@ let chance = false;
 gameContainer.style.display = "none";
 winContainer.style.height = "0";
 
-// console.log(player1,player2);
-
 const winPatterns = [
   [0, 1, 2], // Top row
   [3, 4, 5], // Middle row
@@ -30,7 +28,7 @@ const winPatterns = [
 // Reset Game Logic ___________________________
 function handleResetGame() {
   const resetGame = document.createElement("button");
-  resetGame.innerText = "Rest game";
+  resetGame.innerText = "Reset game";
   resetContainer.append(resetGame);
   resetGame.classList.add(
     "bg-red-500",
@@ -49,7 +47,12 @@ function handleResetGame() {
     gameContainer.style.display = "none";
     formContainer.style.display = "block";
     // Enable boxes
-    boxes.forEach((box) => (box.disabled = false));
+    boxes.forEach((box) => {
+        box.disabled = false
+        box.innerText = ""
+        box.style.background = "#fdba74"
+        box.style.opacity = "1"
+    });
 
     // Reset chance
     chance = false;
@@ -127,7 +130,8 @@ function matchPatterns() {
 function handleDisableBox(disableBox) {
   if (disableBox) {
     boxes.forEach((box) => {
-      box.classList.add("bg-orange-400", "opacity-50");
+      box.style.background = "#f97316";
+      box.style.opacity = .5
       box.disabled = true;
     });
   }
