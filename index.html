@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tik Tak Toe</title>
+  </head>
+  <body class="font-mono">
+    <div
+      id="container"
+      class="border-2 flex flex-col justify-center items-center h-[100vh]"
+    >
+      <!-- ========== Form_Container =========== -->
+      <div id="form_container" class="w-[40%] bg-slate-200 p-10 rounded-lg">
+        <h2 class="text-center mb-5 font-bold text-slate-800 text-2xl">
+          Enter players name
+        </h2>
+        <div
+          id="form"
+          class="flex flex-col justify-left items-center gap-3 border w-full"
+        >
+          <input
+            id="player1"
+            type="text"
+            placeholder="Player 1"
+            class="w-full text-xl px-2 py-1 outline-none rounded-md"
+          />
+          <input
+            id="player2"
+            type="text"
+            placeholder="Player 2"
+            class="w-full text-xl px-2 py-1 outline-none rounded-md"
+          />
+          <button
+            id="play"
+            class="bg-slate-800 text-white px-3 py-2 text-lg mt-5 rounded-md active:bg-black"
+          >
+            Play Game
+          </button>
+        </div>
+      </div>
+
+      <!-- ========== Users_chance =========== -->
+      <div id="users" class="mb-2">
+        <p id="userChance"></p>
+      </div>
+
+      <!-- ========== player winner ========== -->
+      <div style="transition: 1s ease-out;" id="win_container" class="text-lg font-bold mb-5 overflow-hidden transition">
+        Congrasulations <span id="winner" class="text-green-800"></span>, You are winner!
+      </div>
+
+      <!-- ========== Game_container =========== -->
+      <div id="game_container" class="bg-slate-100 grid grid-cols-3 gap-3">
+        <button
+          class="box bg-orange-300 active:bg-orange-400 rounded-md text-3xl px-8 py-4 font-bold text-slate-800 w-14 h-14 flex justify-center items-center"
+        ></button>
+        <button
+          class="box bg-orange-300 active:bg-orange-400 rounded-md text-3xl px-8 py-4 font-bold text-slate-800 w-14 h-14 flex justify-center items-center"
+        ></button>
+        <button
+          class="box bg-orange-300 active:bg-orange-400 rounded-md text-3xl px-8 py-4 font-bold text-slate-800 w-14 h-14 flex justify-center items-center"
+        ></button>
+        <button
+          class="box bg-orange-300 active:bg-orange-400 rounded-md text-3xl px-8 py-4 font-bold text-slate-800 w-14 h-14 flex justify-center items-center"
+        ></button>
+        <button
+          class="box bg-orange-300 active:bg-orange-400 rounded-md text-3xl px-8 py-4 font-bold text-slate-800 w-14 h-14 flex justify-center items-center"
+        ></button>
+        <button
+          class="box bg-orange-300 active:bg-orange-400 rounded-md text-3xl px-8 py-4 font-bold text-slate-800 w-14 h-14 flex justify-center items-center"
+        ></button>
+        <button
+          class="box bg-orange-300 active:bg-orange-400 rounded-md text-3xl px-8 py-4 font-bold text-slate-800 w-14 h-14 flex justify-center items-center"
+        ></button>
+        <button
+          class="box bg-orange-300 active:bg-orange-400 rounded-md text-3xl px-8 py-4 font-bold text-slate-800 w-14 h-14 flex justify-center items-center"
+        ></button>
+        <button
+          class="box bg-orange-300 active:bg-orange-400 rounded-md text-3xl px-8 py-4 font-bold text-slate-800 w-14 h-14 flex justify-center items-center"
+        ></button>
+      </div>
+
+      <div id="reset_container"></div>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
